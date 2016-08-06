@@ -5,4 +5,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+
+
+
+    <!--details for text view in the list-->
+    <string name="todays_weather">Today - Sunny - 88/63</string>
+
+
+
 </resources>
