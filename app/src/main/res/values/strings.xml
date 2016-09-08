@@ -5,12 +5,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-
-
-
     <!--details for text view in the list-->
     <string name="todays_weather">Today - Sunny - 88/63</string>
-
-
+    <string name="tomorrows_weather">Tomorrow - Foggy - 70/46</string>
+    <string name="weds_weather">Weds - Sunny - 72/63</string>
+    <string name="thurss_weather">Thurs - Rainy - 64/51</string>
+    <string name="fris_weather">Fri - Foggy - 70/46</string>
+    <string name="sats_weather">Sat - Sunny - 76/68</string>
 
 </resources>
