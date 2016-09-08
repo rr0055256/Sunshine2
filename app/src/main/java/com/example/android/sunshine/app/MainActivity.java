@@ -8,9 +8,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.StringTokenizer;
 
 
 public class MainActivity extends ActionBarActivity {
+
      int a;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +64,16 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+            ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
+
+            String [] dummydata = {getString(R.string.todays_weather),getString(R.string.tomorrows_weather),getString(R.string.weds_weather),getString(R.string.thurss_weather),getString(R.string.fris_weather),getString(R.string.sats_weather)};
+            List<String> dummyList = new ArrayList<String>(Arrays.asList(dummydata));
+
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),R.layout.list_item_forecast,R.id.list_item_forecast_textview,dummydata);
+            listView.setAdapter(arrayAdapter);
+            return rootView;
         }
     }
 }
